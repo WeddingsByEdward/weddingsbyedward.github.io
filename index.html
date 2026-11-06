@@ -160,6 +160,22 @@
     .about p { color: var(--muted); }
     .about .since { margin-top: 36px; font-family: var(--display); font-style: italic; font-size: 22px; color: var(--wine); }
 
+    /* ============ FOUNDER ============ */
+    .founder { padding-top: 0; }
+    .founder .wrap { display: grid; grid-template-columns: 6fr 5fr; gap: clamp(48px, 8vw, 128px); align-items: center; }
+    .founder-text { order: -1; }
+    .founder h2 { margin-bottom: 8px; }
+    .founder .role { display: block; font-size: 12px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 30px; }
+    .founder p { color: var(--muted); }
+    .founder blockquote { margin: 34px 0 0; padding-left: 22px; border-left: 1px solid var(--gold); font-family: var(--display); font-style: italic; font-size: 22px; line-height: 1.5; color: var(--wine); }
+    .founder-photo { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--cream); }
+    .founder-photo img.photo { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+    .founder-photo .placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+    .founder-photo .placeholder img { width: 26%; opacity: .35; }
+    .founder-photo .placeholder span { font-size: 11px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); }
+    @media (max-width: 860px) { .founder .wrap { grid-template-columns: 1fr; } .founder-text { order: 0; } .founder-photo { max-width: 520px; } }
+    @media (max-width: 600px) { .founder blockquote { font-size: 20px; } }
+
     /* ============ SERVICES ============ */
     .services { background: var(--cream); }
     .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: clamp(56px, 7vw, 88px); }
@@ -320,6 +336,7 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#founder">Founder</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -365,6 +382,25 @@
           <p>Weddings by Edward designs wedding décor for Bengaluru couples and their families. Since 2018 we have set mandaps, stages and florals for muhurthams, nikahs, church weddings, roce ceremonies, engagements and receptions.</p>
           <p>We begin by listening. Your traditions, your venue and the feeling you want your guests to carry home guide every choice, from the frame of the stage to the last flower. We are honest about budgets, and we take care of the details so you can enjoy your day.</p>
           <p class="since">Designing weddings in Bengaluru since 2018.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOUNDER ============ -->
+    <section class="section founder" id="founder">
+      <div class="wrap">
+        <div class="founder-photo reveal">
+          <!-- FOUNDER PHOTO: upload a portrait photo to the images folder named founder.jpg (portrait, about 1200 x 1500).
+               Until it is uploaded, a soft placeholder with the rose E monogram shows here. -->
+          <div class="placeholder" aria-hidden="true"><img src="images/monogram-wine.svg" alt=""><span>Founder photo</span></div>
+          <img class="photo" src="images/founder.jpg" alt="Edward Jenner, founder of Weddings by Edward" loading="lazy" onerror="this.remove()">
+        </div>
+        <div class="founder-text reveal">
+          <span class="accent">meet the founder</span>
+          <h2>Edward <em>Jenner</em></h2>
+          <span class="role">Founder · Visual designer</span>
+          <p>Weddings by Edward was founded by Edward Jenner, a professional visual designer. That design training shapes every wedding we set: how colour, light and flowers work together, how a stage looks from the last row, and how it photographs from every angle.</p>
+          <p>It means more creative setups and real attention to detail. Every mandap, stage and entrance is drawn up with care before a single flower is placed, so your décor feels considered, balanced and completely yours.</p>
         </div>
       </div>
     </section>
